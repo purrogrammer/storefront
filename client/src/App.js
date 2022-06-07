@@ -1,7 +1,8 @@
-import './App.css';
 import 'antd/dist/antd.css';
 import { Button } from 'antd';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Items from './pages/Items';
 
 function App() {
   return (
