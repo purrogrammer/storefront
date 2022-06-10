@@ -7,7 +7,7 @@
   }
   
   #components-layout-demo-custom-trigger .trigger:hover {
-    color: #1890ff;
+    color: rgba(12, 177, 50, 0.13);
   }
   
   #components-layout-demo-custom-trigger .logo {
@@ -18,8 +18,48 @@
   
   .site-layout .site-layout-background {
     background: #fff;
+    box-shadow: 0 0 3px #ccc;
+    border-radius: 3px;
+  }
+.ant-layout-sider {
+  border-radius: 12px !important;
+
+}
+   .ant-layout-sider-children {
+    height: 93vh;
+    padding-top: 14px;
+    padding-right: 21px;
   }
 
   .ant-layout-has-sider {
-      padding: 12px;
-  }
+    padding: 12px !important;
+}
+
+.ant-layout-header {
+  margin: 0 12px !important;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.anticon svg {
+  height: 22px;
+  width: 22px; 
+  font-size: 22px;
+ margin-left: 8px;
+}
+
+.logo h3 {
+  color: rgb(55, 196, 60) !important;
+  font-size: 22px; 
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+   text-align: center;
+}
+
+.ant-menu-item-selected {
+  background-color: rgba(55, 196, 60, 0.498) !important;
+  margin-right: 20px !important;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

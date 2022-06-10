@@ -1,13 +1,19 @@
+import '../resources/layout.css';
+
 import React, { useState } from 'react';
-import '../resourses/layout.css';
+
 import { Layout, Menu } from 'antd';
 
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
     UploadOutlined,
+    CopyOutlined, 
     UserOutlined,
-    VideoCameraOutlined,
+    HomeOutlined,
+    UnorderedListOutlined,
+    LoginOutlined,
+    // VideoCameraOutlined,
   } from '@ant-design/icons';  
 
 
@@ -18,35 +24,47 @@ import {
     return (
       <Layout>
         <Sider trigger={null} collapsible collapsed={collapsed}>
-          <div className="logo" />
+          <div className="logo"><h3>Comic Fans</h3></div>
           <Menu
             theme="dark"
             mode="inline"
-            defaultSelectedKeys={['1']}
-            items={[
+            defaultSelectedKeys={window.location.pathname}
+            items={[ 
               {
-                key: '1',
+                key: '/home',
+                icon: <HomeOutlined />,
+                label: 'Home'
+             
+              },
+              {
+                key: '/bills',
+                icon: <CopyOutlined />,
+                label: 'Invoices',
+              },
+              {
+                key: '/items',
+                icon: <UnorderedListOutlined />,
+                label: 'Inventory',
+              },
+              {
+                key: '/customers',
                 icon: <UserOutlined />,
-                label: 'nav 1',
+                label: 'Account',
               },
               {
-                key: '2',
-                icon: <VideoCameraOutlined />,
-                label: 'nav 2',
-              },
-              {
-                key: '3',
-                icon: <UploadOutlined />,
-                label: 'nav 3',
+                key: '/logout',
+                icon: <LoginOutlined />,
+                label: 'Sign Out',
               },
             ]}
-          />
+          />  
         </Sider>
+      
         <Layout className="site-layout">
           <Header
             className="site-layout-background"
             style={{
-              padding: 0,
+              padding: 12,
             }}
           >
             {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
@@ -57,7 +75,7 @@ import {
           <Content
             className="site-layout-background"
             style={{
-              margin: '24px 16px',
+              margin: '12px',
               padding: 24,
               minHeight: 280,
             }}
